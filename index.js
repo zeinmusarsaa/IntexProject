@@ -134,10 +134,58 @@ const knex = require('knex')({
     }
 })
 
+app.use(express.json());
+
 // unsecured initial route but works
 app.get('/', (req, res) => {
     res.render('index');
 });
+
+
+app.post('/submit', (req, res) => {
+    const formData = req.body;
+
+    // Add timestamp to formData
+    formData.timeStamp = moment().tz('YourTimeZone').format(); // Replace 'YourTimeZone' with the desired timezone
+
+    // Assuming 'response' is the table name and 'origin' is not present in the form
+    const query = 'INSERT INTO response (timeStamp, age, gender, relationshipStatus, occupation, mediaUser, avgTime, noPurpose, distractionFreq, restlessLvl, distractionSusceptability, botheredByWorries, difficultyConcentrating, comparisonFreq, comparisonFeeling, validationFreq, depressionFreq, dailyInterestFluctuation, sleepProblemsFreq, origin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+
+    const values = [
+        formData.timeStamp,
+        formData.age,
+        formData.gender,
+        formData.relationshipStatus,
+        formData.occupation,
+        formData.mediaUser,
+        formData.avgTime,
+        formData.noPurpose,
+        formData.distractionFreq,
+        formData.restlessLvl,
+        formData.distractionSusceptability,
+        formData.botheredByWorries,
+        formData.difficultyConcentrating,
+        formData.comparisonFreq,
+        formData.comparisonFeeling,
+        formData.validationFreq,
+        formData.depressionFreq,
+        formData.dailyInterestFluctuation,
+        formData.sleepProblemsFreq,
+        formData.origin
+    ];
+
+    knex.raw(query, values)
+        .then(() => {
+            console.log('Data inserted successfully');
+            res.status(200).send('OK');
+        })
+        .catch(error => {
+            console.error('Error inserting data', error);
+            res.status(500).send('Internal Server Error');
+        });
+});
+
+// unsecured initial route but works
 
 app.get('/login', (req, res) => {
     res.render('login');
