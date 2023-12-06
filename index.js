@@ -87,6 +87,13 @@ app.get('/register', (req, res) => {
 //     let loggedIn = req.session.loggedIn || 'false';
 //     res.render('addUser', {loggedIn: loggedIn});
 // });
+
+// app.get("/addUser", (req, res) => {
+//     //     let loggedIn = req.session.loggedIn || 'false';
+//     //    res.render('addUser', {loggedIn: loggedIn});
+// });
+
+
 // 
 // app.post('/addUser', (req, res) => {
 //     knex('logininfo').insert(req.body).then(mylogininfo => {
