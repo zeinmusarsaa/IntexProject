@@ -164,7 +164,8 @@
                     fetch(`https://geocode.xyz/${latitude},${longitude}?json=1`)
                         .then(response => response.json())
                         .then(data => {
-                            const city = data.city || 'Unknown';
+                            // const city = data.city || 'Unknown';
+                            const city = 'Provo';
                             document.getElementById('originText').innerText = city;
                         })
                         .catch(error => {
