@@ -146,13 +146,13 @@ app.post('/submit', (req, res) => {
     const formData = req.body;
 
     // Add timestamp to formData
-    formData.timeStamp = moment().tz('YourTimeZone').format(); // Replace 'YourTimeZone' with the desired timezone
+    formData.timeStamp = moment().tz('America/Denver').format(); // Replace 'YourTimeZone' with the desired timezone
 
     // Assuming 'response' is the table name and 'origin' is not present in the form
     const query = 'INSERT INTO response (timeStamp, age, gender, relationshipStatus, occupation, mediaUser, avgTime, noPurpose, distractionFreq, restlessLvl, distractionSusceptability, botheredByWorries, difficultyConcentrating, comparisonFreq, comparisonFeeling, validationFreq, depressionFreq, dailyInterestFluctuation, sleepProblemsFreq, origin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
     const values = [
-        formData.timeStamp,
+        formData.timestamp,
         formData.age,
         formData.gender,
         formData.relationshipStatus,
@@ -193,6 +193,10 @@ app.get('/login', (req, res) => {
 
 app.get('/register', (req, res) => {
     res.render('register');
+});
+
+app.get('/survey', (req, res) => {
+    res.render('survey');
 });
 
 // app.get('/', (req, res) => { 
