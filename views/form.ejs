@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Survey</title>
 </head>
+
 <body>
-    <form id="surveyForm">
+    <form id="formData">
         <!-- Age -->
         <label for="age">Age: </label>
-        <input type="number" id="age" name="age" min="10" max="100" required><br>
+        <input type="number" id="age" name="age" min="0" max="100" required><br>
 
         <!-- Gender -->
         <label for="gender">Gender: </label>
@@ -49,99 +50,99 @@
         </select><br><br>
 
         <!-- How often do you find yourself using social media without a specific purpose? -->
-        <label for="purpose">How often do you use social media without a specific purpose? </label>
+        <label for="noPurpose">How often do you use social media without a specific purpose? </label>
         <ul class="likert">
             <div class="slidecontainer">
-               <p>1<input type="range" min="1" max="5" value="3">5</p>
+               <p>1 - Not Often<input type="range" name = "noPurpose" min="1" max="5" value="3">5 - Very Often</p>
             </div>
         </ul>
 
         <!-- How often do you get distracted by social media when you are busy doing something? -->
-        <label for="distraction">How often do you get distracted by social media when you are busy? </label>
+        <label for="distractionFreq">How often do you get distracted by social media when you are busy? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" name = "distractionFreq" min="1" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- Do you feel restless if you haven’t used social media in a while? -->
-        <label for="restless">Do you feel restless if you haven’t used social media in a while? </label>
+        <label for="restlessLvl">Do you feel restless if you haven’t used social media in a while? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" min="1" name = "restlessLvl" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- How easily distracted are you? -->
-        <label for="easilyDistracted">How easily distracted are you? </label>
+        <label for="distractionSusceptability">How easily distracted are you? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Easily Distracted<input type="range" name = "distractionSusceptability"  min="1" max="5" value="3">5 - Very Easily Distraced</p>
              </div>
         </ul>
 
         <!-- How much are you bothered by worries? -->
-        <label for="worries">How much are you bothered by worries? </label>
+        <label for="botheredByWorries">How much are you bothered by worries? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Bothered<input type="range" name="botheredByWorries" min="1" max="5" value="3">5 - Very Bothered</p>
              </div>
         </ul>
 
         <!-- Do you find it difficult to concentrate on things? -->
-        <label for="concentration">Do you find it difficult to concentrate on things? </label>
+        <label for="difficultyConcentrating">Do you find it difficult to concentrate on things? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" name="difficultyConcentrating" min="1" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- How often do you compare yourself to other successful people through the use of social media? -->
-        <label for="comparison">How often do you compare yourself to other successful people on social media? </label>
+        <label for="comparisonFreq">How often do you compare yourself to other successful people on social media? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" name="comparisonFreq" min="1" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- Following the previous question, how do you feel about these comparisons, generally speaking? -->
-        <label for="comparisonFeelings">How do you feel about comparing yourself to others on social media? </label>
+        <label for="comparisonFeeling">How do you feel about comparing yourself to others on social media? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Good<input type="range" name="comparisonFeeling" min="1" max="5" value="3">5 - Very Good</p>
              </div>
         </ul>
         
 
         <!-- How often do you look to seek validation from features of social media? -->
-        <label for="validation">How often do you seek validation from features of social media? </label>
+        <label for="validationFreq">How often do you seek validation from features of social media? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" name="validationFreq" min="1" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- How often do you feel depressed or down? -->
-        <label for="depressed">How often do you feel depressed or down? </label>
+        <label for="depressionFreq">How often do you feel depressed or down? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" name="depressionFreq" min="1" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- How frequently does your interest in daily activities fluctuate? -->
-        <label for="interestFluctuation">How frequently does your interest in daily activities fluctuate? </label>
+        <label for="dailyInterestFluctuation">How frequently does your interest in daily activities fluctuate? </label>
         <ul class="likert">
             <div class="slidecontainer">
-                <p>1<input type="range" min="1" max="5" value="3">5</p>
+                <p>1 - Not Often<input type="range" name="dailyInterestFluctuation"  min="1" max="5" value="3">5 - Very Often</p>
              </div>
         </ul>
 
         <!-- How often do you face issues regarding sleep? -->
-        <label for="sleepIssues">How often do you face issues regarding sleep? </label>
+        <label for="sleepProblemsFreq">How often do you face issues regarding sleep? </label>
         <ul class="likert">
            <div class="slidecontainer">
-               <p>1<input type="range" min="1" max="5" value="3">5</p>
+               <p>1 - Not Often<input type="range" name="sleepProblemsFreq" min="1" max="5" value="3">5 - Very Often</p>
             </div>
         </ul>
 
@@ -152,26 +153,29 @@
     <script>
         // Function to calculate the score
         function calculateScore(formData) {
-            // Extract values from the formData object
-            const purpose = formData.purpose || 0;
-            const distraction = formData.distraction || 0;
-            const restless = formData.restless || 0;
-            const easilyDistracted = formData.easilyDistracted || 0;
-            const worries = formData.worries || 0;
-            const concentration = formData.concentration || 0;
-            const comparison = formData.comparison || 0;
-            const validation = formData.validation || 0;
-            const depressed = formData.depressed || 0;
-            const interestFluctuation = formData.interestFluctuation || 0;
-            const sleepIssues = formData.sleepIssues || 0;
+            let total = 0;
 
-            // Calculate the score based on the provided formula
-            const score = 100 - (((purpose + distraction + restless + easilyDistracted +
-                                    worries + concentration + comparison + validation +
-                                    depressed + interestFluctuation + sleepIssues - 11) * 25) / 12 +
-                                    ((5 - comparison) * 25) / 12);
+            // Questions to exclude from the total
+            const excludedQuestions = ['age', 'gender', 'relationshipStatus', 'occupation', 'mediaUser', 'avgTime', 'comparisonFeelings'];
 
-            return score;
+            // Sum all Likert scale values except those excluded
+            for (const key in formData) {
+                if (formData.hasOwnProperty(key) && !excludedQuestions.includes(key)) {
+                    const value = parseInt(formData[key]);
+                    if (!isNaN(value)) {
+                        total += value;
+                    } else {
+                        console.error(`Invalid value for question ${key}: ${formData[key]}`);
+                        return NaN; // Return NaN if there's an invalid value
+                    }
+                }
+            }
+
+            // Calculate the score based on a simplified formula
+            const intermediateScore = (total - 11) / 12;
+            const finalScore = 100 - intermediateScore;
+
+            return finalScore;
         }
 
         // Function to handle form submission
@@ -179,21 +183,18 @@
             event.preventDefault(); // Prevents the default form submission
 
             // Get form data
-            const formData = {
-                // Retrieve values from form elements
-                // Note: You need to complete this based on your form structure
-                purpose: parseInt(document.querySelector('input[name="purpose"]:checked').value, 10),
-                distraction: parseInt(document.querySelector('input[name="distraction"]:checked').value, 10),
-                restless: parseInt(document.querySelector('input[name="restless"]:checked').value, 10),
-                easilyDistracted: parseInt(document.querySelector('input[name="easilyDistracted"]:checked').value, 10),
-                worries: parseInt(document.querySelector('input[name="worries"]:checked').value, 10),
-                concentration: parseInt(document.querySelector('input[name="concentration"]:checked').value, 10),
-                comparison: parseInt(document.querySelector('input[name="comparison"]:checked').value, 10),
-                validation: parseInt(document.querySelector('input[name="validation"]:checked').value, 10),
-                depressed: parseInt(document.querySelector('input[name="depressed"]:checked').value, 10),
-                interestFluctuation: parseInt(document.querySelector('input[name="interestFluctuation"]:checked').value, 10),
-                sleepIssues: parseInt(document.querySelector('input[name="sleepIssues"]:checked').value, 10)
-            };
+            const formData = {};
+
+            // Loop through form elements and extract values
+            const formElements = document.getElementById('formData').elements;
+            for (let i = 0; i < formElements.length; i++) {
+                const element = formElements[i];
+
+                // Check if the element has a name and is a likert input
+                if (element.name && element.type === 'range') {
+                    formData[element.name] = element.value;
+                }
+            }
 
             // Calculate the score
             const score = calculateScore(formData);
@@ -203,7 +204,7 @@
         }
 
         // Attach event listener to the form
-        document.getElementById('surveyForm').addEventListener('submit', handleSubmit);
+        document.getElementById('formData').addEventListener('submit', handleSubmit);
     </script>
 </body>
 </html>
