@@ -16428,9 +16428,12 @@ code {
 .btn-inverse-info {
   background-color: rgba(143, 95, 232, 0.2);
   background-image: none;
+  font-size: smaller;
+  padding: 0%;
+  margin-bottom: 3px;
   border-color: rgba(143, 95, 232, 0); }
   .btn-inverse-info:not(.btn-inverse-light) {
-    color: #8f5fe8; }
+    color: #8f5fe8; } 
   .btn-inverse-info:hover {
     color: #ffffff;
     background-color: #8f5fe8;
