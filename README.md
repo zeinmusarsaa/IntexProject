@@ -1,8 +1,7 @@
 <table>
   <tr>
     <td>
-      <a href="https://www.bootstrapdash.com/demo/corona-free/jquery/template/index.html" target="_blank"><img src="preview.jpg"></a>
-       <h3>Corona-free</h3>
+       <h3>Mental Health and Social Media</h3>
     </td>
   </tr>
 </table>
@@ -14,23 +13,6 @@ Corona Admin is packed with all the features that fit your needs but not cramped
 
 Although the template has a design like none other, it is easily customizable to suit your requirements. Corona Admin comes with a clean and well-commented code that makes it easy to work with the template. Thus making it an ideal pick for jump starting your project.
 
-<h1>Credits:</h1>
-
-- Bootstrap 4
-- Material Design Icons
-- jQuery
-- Gulp
-- Chart.js
-
-<h1>Browser Support:</h1>
-
-Corona Admin is designed to work flawlessly with all the latest and modern web browsers.
-
-- Chrome (latest)
-- FireFox (latest)
-- Safari (latest)
-- Opera (latest)
-- IE10+
 
 <h1>License Information:</h1>
 
