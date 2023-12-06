@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Survey</title>
 </head>
+<style>
+    .slidecontainer {
+      width: 100%;
+    }
+    
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 25px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+    
+    .slider:hover {
+      opacity: 1;
+    }
+    
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+    </style>
 <body>
     <form id="surveyForm">
         <!-- Age -->
@@ -51,122 +87,98 @@
         <!-- How often do you find yourself using social media without a specific purpose? -->
         <label for="purpose">How often do you use social media without a specific purpose? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="purpose" value="1"></li>
-            <li>2<br><input type="radio" name="purpose" value="2"></li>
-            <li>3<br><input type="radio" name="purpose" value="3"></li>
-            <li>4<br><input type="radio" name="purpose" value="4"></li>
-            <li>5<br><input type="radio" name="purpose" value="5"></li>
+            <div class="slidecontainer">
+               <p>1<input type="range" min="1" max="5" value="3">5</p>
+            </div>
         </ul>
 
         <!-- How often do you get distracted by social media when you are busy doing something? -->
         <label for="distraction">How often do you get distracted by social media when you are busy? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="distraction" value="1"></li>
-            <li>2<br><input type="radio" name="distraction" value="2"></li>
-            <li>3<br><input type="radio" name="distraction" value="3"></li>
-            <li>4<br><input type="radio" name="distraction" value="4"></li>
-            <li>5<br><input type="radio" name="distraction" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- Do you feel restless if you haven’t used social media in a while? -->
         <label for="restless">Do you feel restless if you haven’t used social media in a while? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="restless" value="1"></li>
-            <li>2<br><input type="radio" name="restless" value="2"></li>
-            <li>3<br><input type="radio" name="restless" value="3"></li>
-            <li>4<br><input type="radio" name="restless" value="4"></li>
-            <li>5<br><input type="radio" name="restless" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- How easily distracted are you? -->
         <label for="easilyDistracted">How easily distracted are you? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="easilyDistracted" value="1"></li>
-            <li>2<br><input type="radio" name="easilyDistracted" value="2"></li>
-            <li>3<br><input type="radio" name="easilyDistracted" value="3"></li>
-            <li>4<br><input type="radio" name="easilyDistracted" value="4"></li>
-            <li>5<br><input type="radio" name="easilyDistracted" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- How much are you bothered by worries? -->
         <label for="worries">How much are you bothered by worries? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="worries" value="1"></li>
-            <li>2<br><input type="radio" name="worries" value="2"></li>
-            <li>3<br><input type="radio" name="worries" value="3"></li>
-            <li>4<br><input type="radio" name="worries" value="4"></li>
-            <li>5<br><input type="radio" name="worries" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- Do you find it difficult to concentrate on things? -->
         <label for="concentration">Do you find it difficult to concentrate on things? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="concentration" value="1"></li>
-            <li>2<br><input type="radio" name="concentration" value="2"></li>
-            <li>3<br><input type="radio" name="concentration" value="3"></li>
-            <li>4<br><input type="radio" name="concentration" value="4"></li>
-            <li>5<br><input type="radio" name="concentration" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- How often do you compare yourself to other successful people through the use of social media? -->
         <label for="comparison">How often do you compare yourself to other successful people on social media? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="comparison" value="1"></li>
-            <li>2<br><input type="radio" name="comparison" value="2"></li>
-            <li>3<br><input type="radio" name="comparison" value="3"></li>
-            <li>4<br><input type="radio" name="comparison" value="4"></li>
-            <li>5<br><input type="radio" name="comparison" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- Following the previous question, how do you feel about these comparisons, generally speaking? -->
         <label for="comparisonFeelings">How do you feel about comparing yourself to others on social media? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="comparisonFeeling" value="1"></li>
-            <li>2<br><input type="radio" name="comparisonFeeling" value="2"></li>
-            <li>3<br><input type="radio" name="comparisonFeeling" value="3"></li>
-            <li>4<br><input type="radio" name="comparisonFeeling" value="4"></li>
-            <li>5<br><input type="radio" name="comparisonFeeling" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
         
 
         <!-- How often do you look to seek validation from features of social media? -->
         <label for="validation">How often do you seek validation from features of social media? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="validation" value="1"></li>
-            <li>2<br><input type="radio" name="validation" value="2"></li>
-            <li>3<br><input type="radio" name="validation" value="3"></li>
-            <li>4<br><input type="radio" name="validation" value="4"></li>
-            <li>5<br><input type="radio" name="validation" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- How often do you feel depressed or down? -->
         <label for="depressed">How often do you feel depressed or down? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="depressed" value="1"></li>
-            <li>2<br><input type="radio" name="depressed" value="2"></li>
-            <li>3<br><input type="radio" name="depressed" value="3"></li>
-            <li>4<br><input type="radio" name="depressed" value="4"></li>
-            <li>5<br><input type="radio" name="depressed" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- How frequently does your interest in daily activities fluctuate? -->
         <label for="interestFluctuation">How frequently does your interest in daily activities fluctuate? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="interestFluctuation" value="1"></li>
-            <li>2<br><input type="radio" name="interestFluctuation" value="2"></li>
-            <li>3<br><input type="radio" name="interestFluctuation" value="3"></li>
-            <li>4<br><input type="radio" name="interestFluctuation" value="4"></li>
-            <li>5<br><input type="radio" name="interestFluctuation" value="5"></li>
+            <div class="slidecontainer">
+                <p>1<input type="range" min="1" max="5" value="3">5</p>
+             </div>
         </ul>
 
         <!-- How often do you face issues regarding sleep? -->
         <label for="sleepIssues">How often do you face issues regarding sleep? </label>
         <ul class="likert">
-            <li>1<br><input type="radio" name="sleepIssues" value="1"></li>
-            <li>2<br><input type="radio" name="sleepIssues" value="2"></li>
-            <li>3<br><input type="radio" name="sleepIssues" value="3"></li>
-            <li>4<br><input type="radio" name="sleepIssues" value="4"></li>
-            <li>5<br><input type="radio" name="sleepIssues" value="5"></li>
+           <div class="slidecontainer">
+               <p>1<input type="range" min="1" max="5" value="3">5</p>
+            </div>
         </ul>
 
 
