@@ -30,7 +30,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item profile">
-            <button style="color: white;" class="btn-block navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <button style="color: white;" class="btn-primary" type="button" data-toggle="minimize">
               <span class="mdi mdi-menu"></span>
             </button>
             <div class="profile-desc">
@@ -119,240 +119,240 @@
           <div class="content-wrapper">
             <div class="row">
               <div class="col-md-8 grid-margin stretch-card">
-                <div class="card">
+                <div class="card" >
                   <div class="card-body">
                     <!-- Not sure what this code is for
                     <div class="d-flex flex-row justify-content-between">
                       <h4 class="card-title mb-1">Project Goal</h4>
                     </div>
                     -->
-                    <div class="row">
-                      <div class="col-12">
+        
+    
                         <div class="preview-list">
                             <!-- Q1 (db name: age) -->
                             <div class="preview-item border-bottom">
-    <form id="formData">
-        <div class="preview-item border-bottom">
-            <div class="preview-item-content d-sm-flex flex-grow">
-                <div class="flex-grow">
-                    <label style="font-size: 16px; font-weight: 600;" for="origin">Current Location: </label>
-                    <span id="originText">Detecting...</span><br><br>
+                                <form id="formData">
+                                    <div class="preview-item border-bottom">
+                                        <div class="preview-item-content d-sm-flex flex-grow">
+                                            <div class="flex-grow">
+                                                <label style="font-size: 16px; font-weight: 600;" for="origin">Current Location: </label>
+                                                <span id="originText">Detecting...</span><br><br>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        
+                            <!-- Age -->
+                            <div class="preview-item border-bottom">
+                                <div class="preview-item-content d-sm-flex flex-grow">
+
+                                    <div class="flex-grow">
+                                        <label style="font-size: 16px; font-weight: 600;" for="age">Age: </label>
+                                        <input required type="number" id="age" name="age" min="0" max="100" required><br>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-item border-bottom">
+                                <div class="preview-item-content d-sm-flex flex-grow">
+
+                                    <div class="flex-grow">
+                                        <label style="font-size: 16px; font-weight: 600;" for="gender">Gender: </label>
+                                        <select id="gender" name="gender">
+                                            <option value="Male" required>Male</option>
+                                            <option value="Female" required>Female</option>
+                                            <option value="Other" required>Other</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-item border-bottom">
+                                <div class="preview-item-content d-sm-flex flex-grow">
+
+                                    <div class="flex-grow">
+                                        <label style="font-size: 16px; font-weight: 600;" for="relationshipStatus">Relationship Status: </label>
+                                        <select id="relationshipStatus" name="relationshipStatus">
+                                            <option value="In a relationship" required>In a relationship</option>
+                                            <option value="Single" required>Single</option>
+                                            <option value="Married" required>Married</option>
+                                            <option value="Divorced" required>Divorced</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-item border-bottom">
+                                <div class="preview-item-content d-sm-flex flex-grow">
+
+                                    <div class="flex-grow">
+                                        <label style="font-size: 16px; font-weight: 600;" for="occupation">Occupation: </label>
+                                        <select name="occupation">
+                                            <option value="University Student" required>University Student</option>
+                                            <option value="School Student" required>School Student</option>
+                                            <option value="Salaried Worker" required>Salaried Worker</option>
+                                            <option value="Retired" required>Retired</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-item border-bottom">
+                                <div class="preview-item-content d-sm-flex flex-grow">
+
+                                    <div class="flex-grow">
+                                        <label style="font-size: 16px; font-weight: 600;" for="mediaUser">Do you use social media? </label>
+                                        <input type="radio" id="mediaUserYes" name="mediaUser" value="Yes" required><label for="mediaUserYes"> Yes</label>
+                                        <input type="radio" id="mediaUserNo" name="mediaUser" value="No" required><label for="mediaUserNo"> No</label><br><br>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preview-item border-bottom">
+                                <div class="preview-item-content d-sm-flex flex-grow">
+
+                                    <div class="flex-grow">
+                                    <!-- Average Time Spent on Social Media Every Day -->
+                                    <label style="font-size: 16px; font-weight: 600;" for="avgTime">Average time spent on social media every day: </label>
+                                    <select required name="avgTime" id="avgTime">
+                                        <option value="Less than an Hour">Less than an Hour</option>
+                                        <option value="Between 1 and 2 hours">Between 1 and 2 hours</option>
+                                        <option value="Between 2 and 3 hours">Between 2 and 3 hours</option>
+                                        <option value="Between 3 and 4 hours">Between 3 and 4 hours</option>
+                                        <option value="Between 4 and 5 hours">Between 4 and 5 hours</option>
+                                        <option value="More than 5 hours">More than 5 hours</option>
+                                    </select><br><br>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                <div class="container mt-5">
+                    <div id="carouselForm" class="carousel slide">
+                        <div class="carousel-inner">
+                            <!-- Carousel items go here -->
+                            <div class="carousel-item active">
+                                <label for="introduction">The following questions are on a scale from 1 (not often) to 5 (most often).</label>
+                            </div>
+
+                            <!-- Slide 1 -->
+                            <div class="carousel-item">
+                                <label for="noPurpose">9. How often do you find yourself using social media without a specific
+                                    purpose?</label><br>
+                                
+                                <input required type="range" class="slidecontainer" id="noPurpose" name="noPurpose" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ9', this.value);">
+                                <label id="lblQ9"></label>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <label for="distractionFreq">10. How often do you get distracted by social media when you are busy doing
+                                    something?</label><br>
+                             <input required type="range" class="slidecontainer id="distractionFreq" name="distractionFreq" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ10', this.value);">
+                                <label id="lblQ10"></label>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <label for="restlessLvl">11. Do you feel restless if you haven’t used social media in a while?</label><br>
+                                1<input required type="range" class="slidecontainer" id="restlessLvl" name="restlessLvl" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ11', this.value);">
+                                <label id="lblQ11"></label>
+                            </div>
+
+                            <div class="carousel-item">
+                                <label for="distractionSusceptability">12. How easily distracted are you?</label><br>
+                                1<input required type="range" class="slidecontainer" id="distractionSusceptability" name="distractionSusceptability" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ12', this.value);">
+                                <label id="lblQ12"></label>
+                            </div>
+
+                            <div class="carousel-item">
+                                <label for="botheredByWorries">13. How much are you bothered by worries?</label><br>
+                                1<input required type="range" class="slidecontainer" id="botheredByWorries" name="botheredByWorries" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ13', this.value);">
+                                <label id="lblQ13"></label>
+                            </div>
+
+                            <div class="carousel-item">
+                                <label for="difficultyConcentrating">14. Do you find it difficult to concentrate on things?</label><br>
+                                <input required type="range" class="slidecontainer" id="q2" name="q2" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ14', this.value);">
+                                <label id="lblQ14"></label>
+                            </div>
+
+                            <div class="carousel-item">
+                                <label for="comparisonFreq">15. How often do you compare yourself to other successful people through the use of social media?</label><br>
+                                <input required type="range" class="slidecontainer" id="comparisonFreq" name="comparisonFreq" min="1"
+                                    max="5" value ="0"onchange="showSize('lblQ15', this.value);">
+                                <label id="lblQ15"></label>
+                            </div>
+
+                            <div class="carousel-item">
+                                <label for="comparisonFeeling">16. Following the previous question, how do you feel about these comparisons, generally speaking?</label><br>
+                                <input required type="range" class="slidecontainer" id="comparisonFeeling" name="comparisonFeeling" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ16', this.value);">
+                                <label id="lblQ16"></label>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <label for="validationFreq">17. How often do you look to seek validation from features of social media?</label><br>
+                                <input required type="range" class="slidecontainer" id="validationFreq" name="validationFreq" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ17', this.value);">
+                                <label id="lblQ17"></label>
+                            </div>
+
+                            <div class="carousel-item">
+                                <label for="depressionFreq">18. How often do you feel depressed or down?</label><br>
+                                <input required type="range" class="slidecontainer" id="depressionFreq" name="depressionFreq" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ18', this.value);">
+                                <label id="lblQ18"></label>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <label for="dailyInterestFluctuation">19. How frequently does your interested in daily activities fluctuate?</label><br>
+                                <input required type="range" class="slidecontainer" id="dailyInterestFluctuation" name="dailyInterestFluctuation" min="1"
+                                    max="5" value="0" onchange="showSize('lblQ19', this.value);">
+                                <label id="lblQ19"></label>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <label for="noPurpose">20.How often do you use social media without a specific purpose? </label><br>
+                                <ul class="likert">
+                                    <div class="slidecontainer">
+                                    <input required type="range" name="noPurpose" min="1" max="5" value="0">
+                                    </div>
+                                </ul>
+                            </div>
+
+                    <!-- ... Repeat for other slides ... -->
+
                 </div>
-            </div>
-        </div>
 
-               
-<!-- Age -->
-<div class="preview-item border-bottom">
-    <div class="preview-item-content d-sm-flex flex-grow">
+                <!-- Navigation Arrows -->
+                <a class="carousel-control-prev" href="#carouselForm" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselForm" role="button" data-slide="next" style="color: black;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
 
-        <div class="flex-grow">
-            <label style="font-size: 16px; font-weight: 600;" for="age">Age: </label>
-            <input required type="number" id="age" name="age" min="0" max="100" required><br>
-        </div>
-    </div>
-</div>
-
-<div class="preview-item border-bottom">
-    <div class="preview-item-content d-sm-flex flex-grow">
-
-        <div class="flex-grow">
-            <label style="font-size: 16px; font-weight: 600;" for="gender">Gender: </label>
-            <select id="gender" name="gender">
-                <option value="Male" required>Male</option>
-                <option value="Female" required>Female</option>
-                <option value="Other" required>Other</option>
-            </select>
-
-        </div>
-    </div>
-</div>
-
-<div class="preview-item border-bottom">
-    <div class="preview-item-content d-sm-flex flex-grow">
-
-        <div class="flex-grow">
-            <label style="font-size: 16px; font-weight: 600;" for="relationshipStatus">Relationship Status: </label>
-            <select id="relationshipStatus" name="relationshipStatus">
-                <option value="In a relationship" required>In a relationship</option>
-                <option value="Single" required>Single</option>
-                <option value="Married" required>Married</option>
-                <option value="Divorced" required>Divorced</option>
-            </select>
-        </div>
-    </div>
-</div>
-
-<div class="preview-item border-bottom">
-    <div class="preview-item-content d-sm-flex flex-grow">
-
-        <div class="flex-grow">
-            <label style="font-size: 16px; font-weight: 600;" for="occupation">Occupation: </label>
-            <select name="occupation">
-                <option value="University Student" required>University Student</option>
-                <option value="School Student" required>School Student</option>
-                <option value="Salaried Worker" required>Salaried Worker</option>
-                <option value="Retired" required>Retired</option>
-            </select>
-
-        </div>
-    </div>
-</div>
-
-<div class="preview-item border-bottom">
-    <div class="preview-item-content d-sm-flex flex-grow">
-
-        <div class="flex-grow">
-            <label style="font-size: 16px; font-weight: 600;" for="mediaUser">Do you use social media? </label>
-            <input type="radio" id="mediaUserYes" name="mediaUser" value="Yes" required><label for="mediaUserYes"> Yes</label>
-            <input type="radio" id="mediaUserNo" name="mediaUser" value="No" required><label for="mediaUserNo"> No</label><br><br>
-        </div>
-    </div>
-</div>
-
-<div class="preview-item border-bottom">
-    <div class="preview-item-content d-sm-flex flex-grow">
-
-        <div class="flex-grow">
-        <!-- Average Time Spent on Social Media Every Day -->
-        <label style="font-size: 16px; font-weight: 600;" for="avgTime">Average time spent on social media every day: </label>
-        <select required name="avgTime" id="avgTime">
-            <option value="Less than an Hour">Less than an Hour</option>
-            <option value="Between 1 and 2 hours">Between 1 and 2 hours</option>
-            <option value="Between 2 and 3 hours">Between 2 and 3 hours</option>
-            <option value="Between 3 and 4 hours">Between 3 and 4 hours</option>
-            <option value="Between 4 and 5 hours">Between 4 and 5 hours</option>
-            <option value="More than 5 hours">More than 5 hours</option>
-        </select><br><br>
-        </div>
-    </div>
-</div>
-
-
-<div class="container mt-5">
-    <div id="carouselForm" class="carousel slide">
-        <div class="carousel-inner">
-            <!-- Carousel items go here -->
-            <div class="carousel-item active">
-                <label for="introduction">The following questions are on a scale from 1 (not often) to 5 (most often).</label>
-            </div>
-
-            <!-- Slide 1 -->
-            <div class="carousel-item">
-                <label for="noPurpose">9. How often do you find yourself using social media without a specific
-                    purpose?</label><br>
-                
-                1<input required type="range" class="slidecontainer" id="noPurpose" name="noPurpose" min="1"
-                    max="5" value="0" onchange="showSize('lblQ9', this.value);">
-                <label id="lblQ9"></label>5
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <label for="distractionFreq">10. How often do you get distracted by social media when you are busy doing
-                    something?</label><br>
-               1 <input required type="range" class="slidecontainer id="distractionFreq" name="distractionFreq" min="1"
-                    max="5" value="0" onchange="showSize('lblQ10', this.value);">
-                <label id="lblQ10"></label>5
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <label for="restlessLvl">11. Do you feel restless if you haven’t used social media in a while?</label><br>
-                1<input required type="range" class="slidecontainer" id="restlessLvl" name="restlessLvl" min="1"
-                    max="5" value="0" onchange="showSize('lblQ11', this.value);">
-                <label id="lblQ11"></label>5
-            </div>
-
-            <div class="carousel-item">
-                <label for="distractionSusceptability">12. How easily distracted are you?</label><br>
-                1<input required type="range" class="slidecontainer" id="distractionSusceptability" name="distractionSusceptability" min="1"
-                    max="5" value="0" onchange="showSize('lblQ12', this.value);">
-                <label id="lblQ12"></label>5
-            </div>
-
-            <div class="carousel-item">
-                <label for="botheredByWorries">13. How much are you bothered by worries?</label><br>
-                1<input required type="range" class="slidecontainer" id="botheredByWorries" name="botheredByWorries" min="1"
-                    max="5" value="0" onchange="showSize('lblQ13', this.value);">
-                <label id="lblQ13"></label>5
-            </div>
-
-            <div class="carousel-item">
-                <label for="difficultyConcentrating">14. Do you find it difficult to concentrate on things?</label><br>
-                1<input required type="range" class="slidecontainer" id="q2" name="q2" min="1"
-                    max="5" value="0" onchange="showSize('lblQ14', this.value);">
-                <label id="lblQ14"></label>5
-            </div>
-
-            <div class="carousel-item">
-                <label for="comparisonFreq">15. How often do you compare yourself to other successful people through the use of social media?</label><br>
-                1<input required type="range" class="slidecontainer" id="comparisonFreq" name="comparisonFreq" min="1"
-                    max="5" value ="0"onchange="showSize('lblQ15', this.value);">
-                <label id="lblQ15"></label>5
-            </div>
-
-            <div class="carousel-item">
-                <label for="comparisonFeeling">16. Following the previous question, how do you feel about these comparisons, generally speaking?</label><br>
-                1<input required type="range" class="slidecontainer" id="comparisonFeeling" name="comparisonFeeling" min="1"
-                    max="5" value="0" onchange="showSize('lblQ16', this.value);">
-                <label id="lblQ16"></label>5
-            </div>
-
-
-            <div class="carousel-item">
-                <label for="validationFreq">17. How often do you look to seek validation from features of social media?</label><br>
-                1<input required type="range" class="slidecontainer" id="validationFreq" name="validationFreq" min="1"
-                    max="5" value="0" onchange="showSize('lblQ17', this.value);">
-                <label id="lblQ17"></label>5
-            </div>
-
-            <div class="carousel-item">
-                <label for="depressionFreq">18. How often do you feel depressed or down?</label><br>
-                1<input required type="range" class="slidecontainer" id="depressionFreq" name="depressionFreq" min="1"
-                    max="5" value="0" onchange="showSize('lblQ18', this.value);">
-                <label id="lblQ18"></label>5
-            </div>
-
-
-            <div class="carousel-item">
-                <label for="dailyInterestFluctuation">19. How frequently does your interested in daily activities fluctuate?</label><br>
-                1<input required type="range" class="slidecontainer" id="dailyInterestFluctuation" name="dailyInterestFluctuation" min="1"
-                    max="5" value="0" onchange="showSize('lblQ19', this.value);">
-                <label id="lblQ19"></label>5
-            </div>
-
-
-            <div class="carousel-item">
-                <label for="noPurpose">20.How often do you use social media without a specific purpose? </label><br>
-                <ul class="likert">
-                    <div class="slidecontainer">
-                       <p>1<input required type="range" name="noPurpose" min="1" max="5" value="0">5</p>
-                    </div>
-                </ul>
-            </div>
-
-    <!-- ... Repeat for other slides ... -->
-
-</div>
-
-<!-- Navigation Arrows -->
-<a class="carousel-control-prev" href="#carouselForm" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carouselForm" role="button" data-slide="next" style="color: black;">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-</a>
-
-</div>
-</div>
-<label for="mentalHealthScore">Your Mental Health Score: </label>
-<span id="mentalHealthScoreText">Calculating...</span><br><br>
-<button type="submit">Submit Survey</button>
-</form>
-</div>
-</div>
+                </div>
+                </div>
+                <label for="mentalHealthScore">Your Mental Health Score: </label>
+                <span id="mentalHealthScoreText">Calculating...</span><br><br>
+                <button type="submit">Submit Survey</button>
+                </form>
+                </div>
+                </div>
 </div>
 
                             
@@ -454,6 +454,10 @@
             return finalScore.toFixed(2); // Return the score rounded to 2 decimal places
         }
 
+        function showSize(labelId, value) {
+            document.getElementById(labelId).innerText = value;
+        }
+
         // Function to handle form submission
         function handleSubmit(event) {
     event.preventDefault(); // Prevents the default form submission
@@ -468,9 +472,14 @@
     for (let i = 0; i < formElements.length; i++) {
         const element = formElements[i];
 
+
         // Check if the element has a name and is a likert input
         if (element.name && element.type === 'range') {
             formData[element.name] = element.value;
+
+            console.log(`Question: ${element.name}, Value: ${element.value}`);
+
+  
 
             // Check if the value is 0 (not answered)
             if (element.value === '0') {
