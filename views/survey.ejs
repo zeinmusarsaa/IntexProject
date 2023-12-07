@@ -1,284 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Corona Admin</title>
-        <!-- plugins:css -->
-        <link rel="stylesheet" href="/vendors/mdi/css/materialdesignicons.min.css">
-        <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
-        <!-- endinject -->
-        <!-- Plugin css for this page -->
-        <link rel="stylesheet" href="/vendors/jvectormap/jquery-jvectormap.css">
-        <link rel="stylesheet" href="/vendors/flag-icon-css/css/flag-icon.min.css">
-        <link rel="stylesheet" href="/vendors/owl-carousel-2/owl.carousel.min.css">
-        <link rel="stylesheet" href="/vendors/owl-carousel-2/owl.theme.default.min.css">
-        <!-- End plugin css for this page -->
-        <!-- inject:css -->
-        <!-- endinject -->
-        <!-- Layout styles -->
-        <link rel="stylesheet" href="/css/style.css">
-        <!-- End layout styles -->
-        <link rel="shortcut icon" href="/images/favicon.png" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-      </head>
-
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mental Health Survey</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="/images/favicon.png" />
+  </head>
+  <body>
     <div class="container-scroller">
-        <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item profile">
-              <button style="color: white;" class="btn-block navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                <span class="mdi mdi-menu"></span>
-              </button>
-              <div class="profile-desc">
-                <div class="profile-pic">
-                  <div class="count-indicator">
-                    <img class="img-xs rounded-circle " src="/images/faces/face15.jpg" alt="">
-                    <span class="count bg-success"></span>
-                  </div>
-                  <div class="profile-name">
-                    <h5 class="mb-0 font-weight-normal" id="username"></h5>
-                  </div>
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item profile">
+            <button style="color: white;" class="btn-block navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+              <span class="mdi mdi-menu"></span>
+            </button>
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
                 </div>
-                <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
-                <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-                  <div class="dropdown-divider"></div>
-                  <a href="#" class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-calendar-today text-success"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1 text-small">Log Out</p>
-                    </div>
-                  </a>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal" id="username"></h5>
                 </div>
               </div>
-            </li>
-            <li class="nav-item nav-category">
-              <span class="nav-link">Navigation</span>
-            </li>
-            <li class="nav-item menu-items">
-              <a class="nav-link" href="index.ejs">
-                <span class="menu-icon">
-                  <i class="mdi mdi-speedometer"></i>
-                </span>
-                <span class="menu-title">Home</span>
-              </a>
-            </li>
-            <li class="nav-item menu-items">
-              <a class="nav-link" href="index.ejs">
-                <span class="menu-icon">
-                  <i class="mdi mdi-speedometer"></i>
-                </span>
-                <span class="menu-title">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-item menu-items">
-              <a class="nav-link">
-                <span class="menu-icon">
-                  <i class="mdi mdi-playlist-play"></i>
-                </span>
-                <form action="/survey" method="get"><button class="btn-inverse-info" type="submit"><span class="menu-title">Survey</span></button></form>
-              </a>
-            </li>
-            <li class="nav-item menu-items">
-              <a class="nav-link" href="pages/tables/basic-table.html">
-                <span class="menu-icon">
-                  <i class="mdi mdi-table-large"></i>
-                </span>
-                <span class="menu-title">Report</span>
-              </a>
-            </li>
-            <li class="nav-item menu-items">
-              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <span class="menu-icon">
-                  <i class="mdi mdi-security"></i>
-                </span>
-                <span class="menu-title">Account</span>
-                <i class="menu-arrow"></i>
-              </a>
-              <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"><form action="/login" method="get"><button class="btn-inverse-info" type="submit">Login</button></form></li>
-                  <li class="nav-item"><form action="/register" method="get"><button class="btn-inverse-info" type="submit">Register</button></form></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        
-    <div class="container-scroller">
-        <div class="container-fluid page-body-wrapper">
-            <div class="main-panel">
-                <div class="row">
-                    <div class="grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                
-
-                                <form id="formData" name="surveyForm" action="/submit" method="post">
-
-                                    <label for="origin">Current Location: </label>
-                                    <span id="originText">Detecting...</span><br><br>
-                                    <!-- Age -->
-                                    <label for="age">Age: </label>
-                                    <input type="number" id="age" name="age" min="0" max="100" required><br>
-                            
-                                    <!-- Gender -->
-                                    <label for="gender">Gender: </label>
-                                    <input type="radio" id="genderMale" name="gender" value="Male"><label for="genderMale"> Male</label>
-                                    <input type="radio" id="genderFemale" name="gender" value="Female"><label for="genderFemale"> Female</label>
-                                    <input type="radio" id="genderOther" name="gender" value="Other"><label for="genderOther"> Other</label><br><br>
-                            
-                                    <!-- Relationship Status -->
-                                    <label for="relationshipStatus">Relationship Status: </label>
-                                    <input type="radio" id="relationshipStatusYes" name="relationshipStatus" value="In a relationship"><label for="relationshipStatusYes"> In a relationship</label>
-                                    <input type="radio" id="relationshipStatusSingle" name="relationshipStatus" value="Single"><label for="relationshipStatusSingle"> Single</label>
-                                    <input type="radio" id="relationshipStatusMarried" name="relationshipStatus" value="Married"><label for="relationshipStatusMarried"> Married</label>
-                                    <input type="radio" id="relationshipStatusDivorced" name="relationshipStatus" value="Divorced"><label for="relationshipStatusDivorced"> Divorced</label><br><br>
-                            
-                                    <!-- Occupation -->
-                                    <label for="occupation">Occupation: </label>
-                                    <input type="radio" id="occupationUniStud" name="occupation" value="University Student"><label for="occupationUniStud"> University Student</label>
-                                    <input type="radio" id="occupationSchStud" name="occupation" value="School Student"><label for="occupationSchStud"> School Student</label>
-                                    <input type="radio" id="occupationSalWrkr" name="occupation" value="Salaried Worker"><label for="occupationSalWrkr"> Salaried Worker</label>
-                                    <input type="radio" id="occupationRetired" name="occupation" value="Retired"><label for="occupationRetired"> Retired</label><br><br>
-                            
-                                    <!-- Media User -->
-                                    <label for="mediaUser">Do you use social media? </label>
-                                    <input type="radio" id="mediaUserYes" name="mediaUser" value="Yes"><label for="mediaUserYes"> Yes</label>
-                                    <input type="radio" id="mediaUserNo" name="mediaUser" value="No"><label for="mediaUserNo"> No</label><br><br>
-                            
-                                    <!-- Average Time Spent on Social Media Every Day -->
-                                    <label for="avgTime">Average time spent on social media every day: </label>
-                                    <select name="avgTime" id="avgTime">
-                                        <option value="Less than an Hour">Less than an Hour</option>
-                                        <option value="Between 1 and 2 hours">Between 1 and 2 hours</option>
-                                        <option value="Between 2 and 3 hours">Between 2 and 3 hours</option>
-                                        <option value="Between 3 and 4 hours">Between 3 and 4 hours</option>
-                                        <option value="Between 4 and 5 hours">Between 4 and 5 hours</option>
-                                        <option value="More than 5 hours">More than 5 hours</option>
-                                    </select><br><br>
-                            
-                                    <!-- How often do you use social media without a specific purpose? -->
-                                    <label for="noPurpose">How often do you use social media without a specific purpose? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                        <p>1 - Not Often<input type="range" name="noPurpose" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How often do you get distracted by social media when you are busy doing something? -->
-                                    <label for="distractionFreq">How often do you get distracted by social media when you are busy? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" name="distractionFreq" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- Do you feel restless if you haven’t used social media in a while? -->
-                                    <label for="restlessLvl">Do you feel restless if you haven’t used social media in a while? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" min="1" name="restlessLvl" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How easily distracted are you? -->
-                                    <label for="distractionSusceptability">How easily distracted are you? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Easily Distracted<input type="range" name="distractionSusceptability" min="1" max="5" value="3">5 - Very Easily Distraced</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How much are you bothered by worries? -->
-                                    <label for="botheredByWorries">How much are you bothered by worries? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Bothered<input type="range" name="botheredByWorries" min="1" max="5" value="3">5 - Very Bothered</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- Do you find it difficult to concentrate on things? -->
-                                    <label for="difficultyConcentrating">Do you find it difficult to concentrate on things? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" name="difficultyConcentrating" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How often do you compare yourself to other successful people through the use of social media? -->
-                                    <label for="comparisonFreq">How often do you compare yourself to other successful people on social media? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" name="comparisonFreq" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- Following the previous question, how do you feel about these comparisons, generally speaking? -->
-                                    <label for="comparisonFeeling">How do you feel about comparing yourself to others on social media? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Good<input type="range" name="comparisonFeeling" min="1" max="5" value="3">5 - Very Good</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How often do you look to seek validation from features of social media? -->
-                                    <label for="validationFreq">How often do you seek validation from features of social media? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" name="validationFreq" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How often do you feel depressed or down? -->
-                                    <label for="depressionFreq">How often do you feel depressed or down? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" name="depressionFreq" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How frequently does your interest in daily activities fluctuate? -->
-                                    <label for="dailyInterestFluctuation">How frequently does your interest in daily activities fluctuate? </label>
-                                    <ul class="likert">
-                                        <div class="slidecontainer">
-                                            <p>1 - Not Often<input type="range" name="dailyInterestFluctuation" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <!-- How often do you face issues regarding sleep? -->
-                                    <label for="sleepProblemsFreq">How often do you face issues regarding sleep? </label>
-                                    <ul class="likert">
-                                    <div class="slidecontainer">
-                                        <p>1 - Not Often<input type="range" name="sleepProblemsFreq" min="1" max="5" value="3">5 - Very Often</p>
-                                        </div>
-                                    </ul>
-                            
-                                    <label for="mentalHealthScore">Your Mental Health Score: </label>
-                                    <span id="mentalHealthScoreText">Calculating...</span><br><br>
-                            
-                                    <!-- Submit button -->
-                                    <input type="submit" value="Submit">
-                                </form>
-                            </div>
-                        </div>
+              <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-calendar-today text-success"></i>
                     </div>
-                </div>
-                            
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Log Out</p>
+                  </div>
+                </a>
+              </div>
             </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="#">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Home</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items" id="dashboard">
+            <a class="nav-link" href="#">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items" id="survey">
+            <a class="nav-link" href="#">
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+              <span class="menu-title">Survey</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items" id="report">
+            <a class="nav-link" href="#">
+              <span class="menu-icon">
+                <i class="mdi mdi-table-large"></i>
+              </span>
+              <span class="menu-title">Report</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+              <span class="menu-title">Account</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><form action="/login" method="get"><button class="btn-inverse-info" type="submit">Login</button></form></li>
+                <li class="nav-item"><form action="/register" method="get"><button class="btn-inverse-info" type="submit">Register</button></form></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_navbar.html -->
+        <!-- partial -->
+         
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-8 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <!-- Not sure what this code is for
+                    <div class="d-flex flex-row justify-content-between">
+                      <h4 class="card-title mb-1">Project Goal</h4>
+                    </div>
+                    -->
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="preview-list">
+                            <!-- Q1 (db name: age) -->
+                            <div class="preview-item border-bottom">
+    <form id="formData">
+        <div class="preview-item border-bottom">
+            <div class="preview-item-content d-sm-flex flex-grow">
+                <div class="flex-grow">
+                    <label style="font-size: 16px; font-weight: 600;" for="origin">Current Location: </label>
+                    <span id="originText">Detecting...</span><br><br>
+                </div>
+            </div>
+        </div>
+
+               
+<!-- Age -->
+<div class="preview-item border-bottom">
+    <div class="preview-item-content d-sm-flex flex-grow">
+
+        <div class="flex-grow">
+            <label style="font-size: 16px; font-weight: 600;" for="age">Age: </label>
+            <input type="number" id="age" name="age" min="0" max="100" required><br>
+        </div>
+    </div>
+</div>
+
+<div class="preview-item border-bottom">
+    <div class="preview-item-content d-sm-flex flex-grow">
+
+        <div class="flex-grow">
+            <label style="font-size: 16px; font-weight: 600;" for="gender">Gender: </label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
 
         </div>
-    
+    </div>
 </div>
+
+<div class="preview-item border-bottom">
+    <div class="preview-item-content d-sm-flex flex-grow">
+
+        <div class="flex-grow">
+            <label style="font-size: 16px; font-weight: 600;" for="relationshipStatus">Relationship Status: </label>
+            <select id="relationshipStatus" name="relationshipStatus">
+                <option value="In a relationship">In a relationship</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="preview-item border-bottom">
+    <div class="preview-item-content d-sm-flex flex-grow">
+
+        <div class="flex-grow">
+            <label style="font-size: 16px; font-weight: 600;" for="occupation">Occupation: </label>
+            <select name="occupation">
+                <option value="University Student">University Student</option>
+                <option value="School Student">School Student</option>
+                <option value="Salaried Worker">Salaried Worker</option>
+                <option value="Retired">Retired</option>
+            </select>
+
+        </div>
+    </div>
+</div>
+
+<div class="preview-item border-bottom">
+    <div class="preview-item-content d-sm-flex flex-grow">
+
+        <div class="flex-grow">
+            <label style="font-size: 16px; font-weight: 600;" for="mediaUser">Do you use social media? </label>
+            <input type="radio" id="mediaUserYes" name="mediaUser" value="Yes"><label for="mediaUserYes"> Yes</label>
+            <input type="radio" id="mediaUserNo" name="mediaUser" value="No"><label for="mediaUserNo"> No</label><br><br>
+        </div>
+    </div>
+</div>
+
+<div class="preview-item border-bottom">
+    <div class="preview-item-content d-sm-flex flex-grow">
+
+        <div class="flex-grow">
+        <!-- Average Time Spent on Social Media Every Day -->
+        <label style="font-size: 16px; font-weight: 600;" for="avgTime">Average time spent on social media every day: </label>
+        <select name="avgTime" id="avgTime">
+            <option value="Less than an Hour">Less than an Hour</option>
+            <option value="Between 1 and 2 hours">Between 1 and 2 hours</option>
+            <option value="Between 2 and 3 hours">Between 2 and 3 hours</option>
+            <option value="Between 3 and 4 hours">Between 3 and 4 hours</option>
+            <option value="Between 4 and 5 hours">Between 4 and 5 hours</option>
+            <option value="More than 5 hours">More than 5 hours</option>
+        </select><br><br>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <div id="carouselForm" class="carousel slide">
+        <div class="carousel-inner">
+            <!-- Carousel items go here -->
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <label for="noPurpose">9. How often do you find yourself using social media without a specific
+                    purpose?</label>
+                
+                <input required type="range" class="form-control-range" id="noPurpose" name="noPurpose" min="1"
+                    max="5" onchange="showSize('lblQ9', this.value);">
+                <label id="lblQ9"></label>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <label for="distractionFreq">10. How often do you get distracted by social media when you are busy doing
+                    something?</label>
+                <input required type="range" class="form-control-range" id="distractionFreq" name="distractionFreq" min="1"
+                    max="5" onchange="showSize('lblQ10', this.value);">
+                <label id="lblQ10"></label>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <label for="restlessLvl">11. Do you feel restless if you haven’t used social media in a while?</label>
+                <input required type="range" class="form-control-range" id="restlessLvl" name="restlessLvl" min="1"
+                    max="5" onchange="showSize('lblQ11', this.value);">
+                <label id="lblQ11"></label>
+            </div>
+
+            <div class="carousel-item">
+                <label for="distractionSusceptability">12. How easily distracted are you?</label>
+                <input required type="range" class="form-control-range" id="distractionSusceptability" name="distractionSusceptability" min="1"
+                    max="5" onchange="showSize('lblQ12', this.value);">
+                <label id="lblQ12"></label>
+            </div>
+
+            <div class="carousel-item">
+                <label for="botheredByWorries">13. How much are you bothered by worries?</label>
+                <input required type="range" class="form-control-range" id="botheredByWorries" name="botheredByWorries" min="1"
+                    max="5" onchange="showSize('lblQ13', this.value);">
+                <label id="lblQ13"></label>
+            </div>
+
+            <div class="carousel-item">
+                <label for="difficultyConcentrating">14. Do you find it difficult to concentrate on things?</label>
+                <input required type="range" class="form-control-range" id="q2" name="q2" min="1"
+                    max="5" onchange="showSize('lblQ14', this.value);">
+                <label id="lblQ14"></label>
+            </div>
+
+            <div class="carousel-item">
+                <label for="comparisonFreq">15. How often do you compare yourself to other successful people through the use of social media?</label>
+                <input required type="range" class="form-control-range" id="comparisonFreq" name="comparisonFreq" min="1"
+                    max="5" onchange="showSize('lblQ15', this.value);">
+                <label id="lblQ15"></label>
+            </div>
+
+            <div class="carousel-item">
+                <label for="comparisonFeeling">16. Following the previous question, how do you feel about these comparisons, generally speaking?</label>
+                <input required type="range" class="form-control-range" id="comparisonFeeling" name="comparisonFeeling" min="1"
+                    max="5" onchange="showSize('lblQ16', this.value);">
+                <label id="lblQ16"></label>
+            </div>
+
+
+            <div class="carousel-item">
+                <label for="validationFreq">17. How often do you look to seek validation from features of social media?</label>
+                <input required type="range" class="form-control-range" id="validationFreq" name="validationFreq" min="1"
+                    max="5" onchange="showSize('lblQ17', this.value);">
+                <label id="lblQ17"></label>
+            </div>
+
+            <div class="carousel-item">
+                <label for="depressionFreq">18. How often do you feel depressed or down?</label>
+                <input required type="range" class="form-control-range" id="depressionFreq" name="depressionFreq" min="1"
+                    max="5" onchange="showSize('lblQ18', this.value);">
+                <label id="lblQ18"></label>
+            </div>
+
+
+            <div class="carousel-item">
+                <label for="dailyInterestFluctuation">19. How frequently does your interested in daily activities fluctuate?</label>
+                <input required type="range" class="form-control-range" id="dailyInterestFluctuation" name="dailyInterestFluctuation" min="1"
+                    max="5" onchange="showSize('lblQ19', this.value);">
+                <label id="lblQ19"></label>
+            </div>
+
+
+            <div class="carousel-item">
+                <label for="noPurpose">How often do you use social media without a specific purpose? </label>
+                <ul class="likert">
+                    <div class="slidecontainer">
+                       <p>1 - Not Often<input type="range" name="noPurpose" min="1" max="5" value="3">5 - Very Often</p>
+                    </div>
+                </ul>
+            </div>
+
+    <!-- ... Repeat for other slides ... -->
+
+</div>
+
+<!-- Navigation Arrows -->
+<a class="carousel-control-prev" href="#carouselForm" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselForm" role="button" data-slide="next" style="color: black;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+</a>
+
+</div>
+</div>
+<label for="mentalHealthScore">Your Mental Health Score: </label>
+<span id="mentalHealthScoreText">Calculating...</span><br><br>
+<button type="submit">Submit Survey</button>
+</form>
+</div>
+</div>
+</div>
+
+                            
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="/vendors/chart.js/Chart.min.js"></script>
+    <script src="/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- inject:js -->
+    <script src="/js/off-canvas.js"></script>
+    <script src="/js/hoverable-collapse.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/settings.js"></script>
+    <script src="/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script>
-        function updateCurrentLocation() {
+      document.getElementById('dashboard').addEventListener('click', function() {
+        // Use JavaScript to simulate a click on the link that triggers the GET request
+        window.location.href = '/dashboard';
+      });
+      document.getElementById('survey').addEventListener('click', function() {
+        // Use JavaScript to simulate a click on the link that triggers the GET request
+        window.location.href = '/survey';
+      });
+      document.getElementById('report').addEventListener('click', function() {
+        // Use JavaScript to simulate a click on the link that triggers the GET request
+        window.location.href = '/report';
+      });
+      // Function to calculate the score
+      function updateCurrentLocation() {
             // Use the Geolocation API to get the user's current location
             navigator.geolocation.getCurrentPosition(
                 position => {
@@ -369,26 +484,6 @@
         // Attach event listener to the form
         document.getElementById('formData').addEventListener('submit', handleSubmit);
     </script>
-    
-      <script src="/vendors/js/vendor.bundle.base.js"></script>
-      <!-- endinject -->
-      <!-- Plugin js for this page -->
-      <script src="/vendors/chart.js/Chart.min.js"></script>
-      <script src="/vendors/progressbar.js/progressbar.min.js"></script>
-      <script src="/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-      <script src="/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-      <script src="/vendors/owl-carousel-2/owl.carousel.min.js"></script>
-      <!-- End plugin js for this page -->
-      <!-- inject:js -->
-      <script src="/js/off-canvas.js"></script>
-      <script src="/js/hoverable-collapse.js"></script>
-      <script src="/js/misc.js"></script>
-      <script src="/js/settings.js"></script>
-      <script src="/js/todolist.js"></script>
-      <!-- endinject -->
-      <!-- Custom js for this page -->
-      <script src="/js/dashboard.js"></script>
-      <!-- End custom js for this page -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
+
